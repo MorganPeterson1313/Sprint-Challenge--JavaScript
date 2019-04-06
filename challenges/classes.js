@@ -13,7 +13,7 @@ class CuboidMaker {
             
           }
 
-        console.log(mutiplyerAdder( this.length, this.height, this.width) )
+        return mutiplyerAdder( this.length, this.height, this.width);
       }
     
 
@@ -22,7 +22,7 @@ class CuboidMaker {
         function multiply(x, y, z , cb) {
             return cb = (x * y* z);
           }
-        console.log(multiply(this.length, this.width ,this.height ));
+        return multiply(this.length, this.width ,this.height );
       }
 
     }
