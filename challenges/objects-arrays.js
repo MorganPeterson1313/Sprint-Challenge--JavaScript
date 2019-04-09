@@ -89,7 +89,7 @@ Log the result of your new array. */
 const contactInfo = [];
 for (let i=0; i< graduates.length; i++){
 
-contactInfo.push(graduates[i].first_name, graduates[i].email);
+contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
 
 }
 
@@ -132,7 +132,7 @@ const animalNames = [];
 
 zooAnimals.forEach(function (element) {
 
-animalNames.push(element.animal_name, element.scientific_name);
+animalNames.push(`Animal Name:${element.animal_name} Scientific Name: ${element.scientific_name}`);
   
 });
 console.log(animalNames);
@@ -166,14 +166,10 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
-const populations = []
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const populationTotal = zooAnimals.reduce((total, animal) => { 
 
-zooAnimals.forEach(function(array){ 
-  populations.push(array.population);
-  console.log( populations.reduce(reducer))
-});
+  return  total += animal.population;
+}, 0);
 console.log(populationTotal);
 
 

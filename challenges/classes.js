@@ -8,21 +8,14 @@ class CuboidMaker {
     }
 
     surfaceArea(){
-        function mutiplyerAdder(x, y, z , cb) {
-            return cb = 2 * (x * y + x * z + y * z);
-            
-          }
-
-        return mutiplyerAdder( this.length, this.height, this.width);
+       return  2 * (`${this.length}` * `${this.width}` + `${this.length}` * `${this.width}` + `${this.width}` * `${this.height}`);
+    
       }
     
 
       volume(){
 
-        function multiply(x, y, z , cb) {
-            return cb = (x * y* z);
-          }
-        return multiply(this.length, this.width ,this.height );
+        return  `${this.length}` * `${this.length}` * `${this.height}`;
       }
 
     }
